@@ -1,0 +1,12 @@
+[Unit]
+Description=ALSA Sequencer connection Keeper
+After=alsa-state.target
+
+[Service]
+Type=simple
+User=nobody
+Group=audio
+ExecStart=/usr/local/bin/aseqkeeper
+
+[Install]
+WantedBy=multi-user.target
